@@ -1,0 +1,12 @@
+# Site settings
+title: JournALIsm
+email: me@aliakbars.com
+description: "Private site of aliakbars"
+baseurl: ""
+url: "http://aliakbars.github.io"
+twitter_username: aliakbars
+github_username:  aliakbars
+
+# Build settings
+markdown: kramdown
+permalink: pretty
