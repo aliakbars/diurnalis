@@ -2,7 +2,7 @@
 layout: post
 title:  "Google Chart API"
 date:   2014-07-07 15:01:00
-categories: google chart api
+categories: google api
 ---
 
 Google makes almost every part of development tools nowadays. And this chart API is one of those pretty cool stuff. Drawing live chart with tooltips is piece of cake with this API.
