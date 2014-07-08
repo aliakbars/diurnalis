@@ -5,8 +5,8 @@
     <description>Private site of aliakbars</description>
     <link>http://aliakbars.github.io/</link>
     <atom:link href="http://aliakbars.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 07 Jul 2014 15:35:29 +0700</pubDate>
-    <lastBuildDate>Mon, 07 Jul 2014 15:35:29 +0700</lastBuildDate>
+    <pubDate>Tue, 08 Jul 2014 21:57:26 +0700</pubDate>
+    <lastBuildDate>Tue, 08 Jul 2014 21:57:26 +0700</lastBuildDate>
     <generator>Jekyll v2.1.0</generator>
     
       <item>
@@ -17,7 +17,8 @@
 
 &lt;p&gt;Then, I came across &lt;a href=&quot;http://chartkick.com/&quot;&gt;Chartkick&lt;/a&gt;. It’s simply mesmerizing. It’s free, but rich and powerful. I just need to include one Javascript file and Google API Javascript, and then everything will be as simple as one line on the front-end. Here’s an example:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line_chart&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;{% line_chart data %}
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;That’s it.&lt;/p&gt;
 
@@ -27,13 +28,11 @@
 
 </description>
         <pubDate>Mon, 07 Jul 2014 22:01:00 +0700</pubDate>
-        <link>http://aliakbars.github.io/google/chart/api/2014/07/07/google-chart-api/</link>
-        <guid isPermaLink="true">http://aliakbars.github.io/google/chart/api/2014/07/07/google-chart-api/</guid>
+        <link>http://aliakbars.github.io/google/api/2014/07/07/google-chart-api/</link>
+        <guid isPermaLink="true">http://aliakbars.github.io/google/api/2014/07/07/google-chart-api/</guid>
         
         
         <category>google</category>
-        
-        <category>chart</category>
         
         <category>api</category>
         

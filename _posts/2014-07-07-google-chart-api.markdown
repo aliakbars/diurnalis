@@ -11,9 +11,9 @@ It all started when I was looking for a library to draw charts on PHP. I've been
 
 Then, I came across [Chartkick][chartkick]. It's simply mesmerizing. It's free, but rich and powerful. I just need to include one Javascript file and Google API Javascript, and then everything will be as simple as one line on the front-end. Here's an example:
 
-{% highlight python %}
-{ % line_chart data % }
-{% endhighlight %}
+{% raw %}
+	{% line_chart data %}
+{% endraw %}
 
 That's it.
 
