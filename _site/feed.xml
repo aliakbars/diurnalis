@@ -5,9 +5,33 @@
     <description>Private site of aliakbars</description>
     <link>http://aliakbars.github.io/</link>
     <atom:link href="http://aliakbars.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 08 Jul 2014 21:57:26 +0700</pubDate>
-    <lastBuildDate>Tue, 08 Jul 2014 21:57:26 +0700</lastBuildDate>
-    <generator>Jekyll v2.1.0</generator>
+    <pubDate>Tue, 04 Nov 2014 21:02:55 +0700</pubDate>
+    <lastBuildDate>Tue, 04 Nov 2014 21:02:55 +0700</lastBuildDate>
+    <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Ruby on Rails</title>
+        <description>&lt;p&gt;I am trying to learn &lt;a href=&quot;http://rubyonrails.org/&quot;&gt;Ruby on Rails&lt;/a&gt; now. It seems like creating web apps can be effortless when you use Ruby on Rails – even for the Javascript and CSS parts! Learning Ruby on Rails means you will learn one type of syntax to rule them all.&lt;/p&gt;
+
+&lt;p&gt;Ruby on Rails uses &lt;a href=&quot;http://coffeescript.org/&quot;&gt;Coffeescript&lt;/a&gt; to build Javascript files and &lt;a href=&quot;http://sass-lang.com/&quot;&gt;Sass&lt;/a&gt; to build CSS files. By eliminating curly brackets and semi-colon, your code will be more human-readable. They even compile it down to a pretty-printed Javascript and CSS! It is simply awesome.&lt;/p&gt;
+
+&lt;p&gt;Being one of the best web-app development framework, they use Ruby on Rails as a guideline to create Laravel or so I’ve heard. However, I still hesitate to use Ruby on Rails on a daily basis. I am afraid that it will make me faltered when I have to face “raw” Javascript and CSS. I mean, I hate Java now since I’ve learned how to use Python.&lt;/p&gt;
+
+&lt;p&gt;What do you think?&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 05 Nov 2014 03:38:32 +0700</pubDate>
+        <link>http://aliakbars.github.io/ruby/on/rails/2014/11/05/ruby-on-rails/</link>
+        <guid isPermaLink="true">http://aliakbars.github.io/ruby/on/rails/2014/11/05/ruby-on-rails/</guid>
+        
+        
+        <category>ruby</category>
+        
+        <category>on</category>
+        
+        <category>rails</category>
+        
+      </item>
     
       <item>
         <title>Google Chart API</title>
