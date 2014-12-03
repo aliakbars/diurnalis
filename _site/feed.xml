@@ -5,9 +5,49 @@
     <description>Private site of aliakbars</description>
     <link>http://aliakbars.github.io/</link>
     <atom:link href="http://aliakbars.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 04 Nov 2014 21:02:55 +0700</pubDate>
-    <lastBuildDate>Tue, 04 Nov 2014 21:02:55 +0700</lastBuildDate>
+    <pubDate>Wed, 03 Dec 2014 19:12:00 +0700</pubDate>
+    <lastBuildDate>Wed, 03 Dec 2014 19:12:00 +0700</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>I Just Can't Stop Learning - Flask</title>
+        <description>&lt;p&gt;It seems like my mind keeps pushing me to learn something new. I haven’t even done learning Ruby on Rails yet, but I’ve been attracted to learn Python Flask now. Since I now Python better than Ruby, I just can’t resist to at least deploy a “Hello, World!” project to Heroku. You can find it &lt;a href=&quot;http://flask.aliakbars.com&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://flask.pocoo.org/docs/0.10/&quot;&gt;Flask&lt;/a&gt; is defined as a microframework. As written on their site, a minimal Flask application can be written in just a very few lines:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;flask&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Flask&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;app&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Flask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;@app.route&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;/&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;hello_world&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;Hello World!&amp;#39;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;See? That’s much easier than writing a &lt;a href=&quot;https://www.djangoproject.com/&quot;&gt;Django&lt;/a&gt; app.&lt;/p&gt;
+
+&lt;p&gt;However, since Flask is really simple, the codes can easily be spaghetti. Furthermore, Flask does not come with Cross-Site Request Forgery (CSRF) protection. It is stated clearly on their page:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Why does Flask not do that for you? The ideal place for this to happen is the form validation framework, which does not exist in Flask.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So, I guess it is better to use Flask just as it is intended to in the very first place: simple web app. Nevertheless, when you have to deal with forms or complex algorithm, then Django will come in handy.&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 04 Dec 2014 01:50:21 +0700</pubDate>
+        <link>http://aliakbars.github.io/python,/flask,/microframework/2014/12/04/i-just-cant-stop-learning/</link>
+        <guid isPermaLink="true">http://aliakbars.github.io/python,/flask,/microframework/2014/12/04/i-just-cant-stop-learning/</guid>
+        
+        
+        <category>python,</category>
+        
+        <category>flask,</category>
+        
+        <category>microframework</category>
+        
+      </item>
     
       <item>
         <title>Ruby on Rails</title>

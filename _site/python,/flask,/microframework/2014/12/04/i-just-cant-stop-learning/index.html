@@ -4,10 +4,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Diurnalis</title>
+    <title>I Just Can't Stop Learning - Flask</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Private site of aliakbars">
-    <link rel="canonical" href="http://aliakbars.github.io/">
+    <link rel="canonical" href="http://aliakbars.github.io/python,/flask,/microframework/2014/12/04/i-just-cant-stop-learning/">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/main.css">
@@ -54,50 +54,42 @@
 
     <div class="page-content">
       <div class="wrap">
-      <div class="home">
+      <div class="post">
 
-  <h1>Posts</h1>
+  <header class="post-header">
+    <h1>I Just Can't Stop Learning - Flask</h1>
+    <p class="meta">Dec 4, 2014</p>
+  </header>
 
-  <ul class="posts">
-    
-      <li>
-        <span class="post-date">Dec 4, 2014</span>
-        <a class="post-link" href="/python,/flask,/microframework/2014/12/04/i-just-cant-stop-learning/">I Just Can't Stop Learning - Flask</a>
-        <p>It seems like my mind keeps pushing me to learn something new. I haven&#8217;t even done learning Ruby on Rails yet, but I&#8217;ve been attracted to learn Python Flask now. Since I now Python better than Ruby, I just can&#8217;t resist to at least deploy a &#8220;Hello, World!&#8221; project to Heroku. You can find it <a href="http://flask.aliakbars.com">here</a>.</p>
+  <article class="post-content">
+  <p>It seems like my mind keeps pushing me to learn something new. I haven’t even done learning Ruby on Rails yet, but I’ve been attracted to learn Python Flask now. Since I now Python better than Ruby, I just can’t resist to at least deploy a “Hello, World!” project to Heroku. You can find it <a href="http://flask.aliakbars.com">here</a>.</p>
 
+<p><a href="http://flask.pocoo.org/docs/0.10/">Flask</a> is defined as a microframework. As written on their site, a minimal Flask application can be written in just a very few lines:</p>
 
-      </li>
-    
-      <li>
-        <span class="post-date">Nov 5, 2014</span>
-        <a class="post-link" href="/ruby/on/rails/2014/11/05/ruby-on-rails/">Ruby on Rails</a>
-        <p>I am trying to learn <a href="http://rubyonrails.org/">Ruby on Rails</a> now. It seems like creating web apps can be effortless when you use Ruby on Rails &#8211; even for the Javascript and CSS parts! Learning Ruby on Rails means you will learn one type of syntax to rule them all.</p>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
 
+<span class="nd">@app.route</span><span class="p">(</span><span class="s">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s">&#39;Hello World!&#39;</span>
 
-      </li>
-    
-      <li>
-        <span class="post-date">Jul 7, 2014</span>
-        <a class="post-link" href="/google/api/2014/07/07/google-chart-api/">Google Chart API</a>
-        <p>Google makes almost every part of development tools nowadays. And this chart API is one of those pretty cool stuff. Drawing live chart with tooltips is piece of cake with this API.</p>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span></code></pre></div>
 
+<p>See? That’s much easier than writing a <a href="https://www.djangoproject.com/">Django</a> app.</p>
 
-      </li>
-    
-      <li>
-        <span class="post-date">Jul 4, 2014</span>
-        <a class="post-link" href="/jekyll/update/2014/07/04/welcome-to-jekyll/">Welcome to Jekyll!</a>
-        <p>This is actually an auto-generated post from Jekyll. I just want to edit it so that it looks like it is mine. It is a very cool way for programmer to create a blogpost, since you can just write it down using your favourite text-editor, then &#8211; voila! &#8211; it is available on the web.</p>
+<p>However, since Flask is really simple, the codes can easily be spaghetti. Furthermore, Flask does not come with Cross-Site Request Forgery (CSRF) protection. It is stated clearly on their page:</p>
+
+<blockquote>
+  <p>Why does Flask not do that for you? The ideal place for this to happen is the form validation framework, which does not exist in Flask.</p>
+</blockquote>
+
+<p>So, I guess it is better to use Flask just as it is intended to in the very first place: simple web app. Nevertheless, when you have to deal with forms or complex algorithm, then Django will come in handy.</p>
 
 
-      </li>
-    
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+  </article>
 
 </div>
-
       </div>
     </div>
 
