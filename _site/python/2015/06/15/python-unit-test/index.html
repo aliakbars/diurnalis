@@ -4,10 +4,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Diurnalis</title>
+    <title>Python Unit Test</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Private site of aliakbars">
-    <link rel="canonical" href="http://aliakbars.github.io/">
+    <link rel="canonical" href="http://aliakbars.github.io/python/2015/06/15/python-unit-test/">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/main.css">
@@ -54,58 +54,61 @@
 
     <div class="page-content">
       <div class="wrap">
-      <div class="home">
+      <div class="post">
 
-  <h1>Posts</h1>
+  <header class="post-header">
+    <h1>Python Unit Test</h1>
+    <p class="meta">Jun 15, 2015</p>
+  </header>
 
-  <ul class="posts">
-    
-      <li>
-        <span class="post-date">Jun 15, 2015</span>
-        <a class="post-link" href="/python/2015/06/15/python-unit-test/">Python Unit Test</a>
-        <p>Test-driven development has become more prevalent these days. People started to realize that maintainable working code is more important than writing the documentation of the code. As for me, I started to write test cases for my codes after enrolling the <a href="https://www.udacity.com/course/viewer#!/c-cs212/l-48532737/e-48737202/m-48692640">Design of Computer Program class</a> on Udacity. On the course, you can see that writing unit test can really help you to breakdown the problem you are facing and how to think modularly.</p>
+  <article class="post-content">
+  <p>Test-driven development has become more prevalent these days. People started to realize that maintainable working code is more important than writing the documentation of the code. As for me, I started to write test cases for my codes after enrolling the <a href="https://www.udacity.com/course/viewer#!/c-cs212/l-48532737/e-48737202/m-48692640">Design of Computer Program class</a> on Udacity. On the course, you can see that writing unit test can really help you to breakdown the problem you are facing and how to think modularly.</p>
+
+<p>The easiest way to write a unit test in Python is by using <code>assert</code>. You just need to declare the function with its parameters and then compare it with the predicted output. You can see the example below.</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+	<span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+
+<span class="k">assert</span> <span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span></code></pre></div>
+
+<p>It might look so simple, but believe me, it will help you that much in terms of solving the problems meticulously step by step.</p>
+
+<p>Aside from <code>assert</code>, Python has a package module specifically designed for unit testing called <a href="https://docs.python.org/2/library/unittest.html"><code>unittest</code></a>. The module is a actually a framework that can handle several things in terms of unit testing – based on the site:</p>
+
+<ul>
+  <li>test fixture: the preparation needed for testing, such as proxy database</li>
+  <li>test case: the smallest unit of testing</li>
+  <li>test suite: set of test cases used for integration testing, and</li>
+  <li>test runner: a component which orchestrates the execution of the tests and provides the outcome to the user</li>
+</ul>
+
+<p>The script for unit testing using the <code>unittest</code> module is basically consists of things like these:</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">unittest</span>
+
+<span class="k">class</span> <span class="nc">MyTest</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+	<span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="c"># Where you define the preparation needed for testing, e.g. database</span>
+
+	<span class="k">def</span> <span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="c"># What to do after the test is completed</span>
+
+	<span class="k">def</span> <span class="nf">testCase1</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="c"># Test case #1</span>
+
+	<span class="k">def</span> <span class="nf">testCase2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="c"># Test case #2</span></code></pre></div>
+
+<p>The interesting point of using the <code>unittest</code> module is that you can run the test cases arbitrarily. You can write it in a separate file, or just include it on the same file. Then, when you want to run the test, you just have to run this command from shell:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">python -m unittest &lt;your_test_file_name.py&gt;</code></pre></div>
+
+<p>Believe me, it is a very good thing to write your own test cases beforehand, so that when you have to change the code, you can always check it easily whether it will work the same way or not. As I’ve been taught, this is the way of designing a computer program. The more test case you write, the more robust your code should be!</p>
 
 
-      </li>
-    
-      <li>
-        <span class="post-date">Dec 4, 2014</span>
-        <a class="post-link" href="/python/flask/2014/12/04/i-just-cant-stop-learning/">I Just Can't Stop Learning - Flask</a>
-        <p>It seems like my mind keeps pushing me to learn something new. I haven&#8217;t even done learning Ruby on Rails yet, but I&#8217;ve been attracted to learn Python Flask now. Since I now Python better than Ruby, I just can&#8217;t resist to at least deploy a &#8220;Hello, World!&#8221; project to Heroku. You can find it <a href="http://flask.aliakbars.com">here</a>.</p>
-
-
-      </li>
-    
-      <li>
-        <span class="post-date">Nov 5, 2014</span>
-        <a class="post-link" href="/ruby-on-rails/2014/11/05/ruby-on-rails/">Ruby on Rails</a>
-        <p>I am trying to learn <a href="http://rubyonrails.org/">Ruby on Rails</a> now. It seems like creating web apps can be effortless when you use Ruby on Rails &#8211; even for the Javascript and CSS parts! Learning Ruby on Rails means you will learn one type of syntax to rule them all.</p>
-
-
-      </li>
-    
-      <li>
-        <span class="post-date">Jul 7, 2014</span>
-        <a class="post-link" href="/google/api/2014/07/07/google-chart-api/">Google Chart API</a>
-        <p>Google makes almost every part of development tools nowadays. And this chart API is one of those pretty cool stuff. Drawing live chart with tooltips is piece of cake with this API.</p>
-
-
-      </li>
-    
-      <li>
-        <span class="post-date">Jul 4, 2014</span>
-        <a class="post-link" href="/jekyll/update/2014/07/04/welcome-to-jekyll/">Welcome to Jekyll!</a>
-        <p>This is actually an auto-generated post from Jekyll. I just want to edit it so that it looks like it is mine. It is a very cool way for programmer to create a blogpost, since you can just write it down using your favourite text-editor, then &#8211; voila! &#8211; it is available on the web.</p>
-
-
-      </li>
-    
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+  </article>
 
 </div>
-
       </div>
     </div>
 

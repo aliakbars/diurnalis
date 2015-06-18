@@ -2,7 +2,7 @@
 layout: post
 title:  "Ruby on Rails"
 date:   2014-11-04 20:38:32
-categories: ruby on rails
+categories: ruby-on-rails
 ---
 
 I am trying to learn [Ruby on Rails][ror] now. It seems like creating web apps can be effortless when you use Ruby on Rails -- even for the Javascript and CSS parts! Learning Ruby on Rails means you will learn one type of syntax to rule them all.

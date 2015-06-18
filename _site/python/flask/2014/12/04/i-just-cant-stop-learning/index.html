@@ -4,10 +4,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ruby on Rails</title>
+    <title>I Just Can't Stop Learning - Flask</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Private site of aliakbars">
-    <link rel="canonical" href="http://aliakbars.github.io/ruby/on/rails/2014/11/05/ruby-on-rails/">
+    <link rel="canonical" href="http://aliakbars.github.io/python/flask/2014/12/04/i-just-cant-stop-learning/">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/main.css">
@@ -57,18 +57,34 @@
       <div class="post">
 
   <header class="post-header">
-    <h1>Ruby on Rails</h1>
-    <p class="meta">Nov 5, 2014</p>
+    <h1>I Just Can't Stop Learning - Flask</h1>
+    <p class="meta">Dec 4, 2014</p>
   </header>
 
   <article class="post-content">
-  <p>I am trying to learn <a href="http://rubyonrails.org/">Ruby on Rails</a> now. It seems like creating web apps can be effortless when you use Ruby on Rails – even for the Javascript and CSS parts! Learning Ruby on Rails means you will learn one type of syntax to rule them all.</p>
+  <p>It seems like my mind keeps pushing me to learn something new. I haven’t even done learning Ruby on Rails yet, but I’ve been attracted to learn Python Flask now. Since I now Python better than Ruby, I just can’t resist to at least deploy a “Hello, World!” project to Heroku. You can find it <a href="http://flask.aliakbars.com">here</a>.</p>
 
-<p>Ruby on Rails uses <a href="http://coffeescript.org/">Coffeescript</a> to build Javascript files and <a href="http://sass-lang.com/">Sass</a> to build CSS files. By eliminating curly brackets and semi-colon, your code will be more human-readable. They even compile it down to a pretty-printed Javascript and CSS! It is simply awesome.</p>
+<p><a href="http://flask.pocoo.org/docs/0.10/">Flask</a> is defined as a microframework. As written on their site, a minimal Flask application can be written in just a very few lines:</p>
 
-<p>Being one of the best web-app development framework, they use Ruby on Rails as a guideline to create Laravel or so I’ve heard. However, I still hesitate to use Ruby on Rails on a daily basis. I am afraid that it will make me faltered when I have to face “raw” Javascript and CSS. I mean, I hate Java now since I’ve learned how to use Python.</p>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
 
-<p>What do you think?</p>
+<span class="nd">@app.route</span><span class="p">(</span><span class="s">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s">&#39;Hello World!&#39;</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span></code></pre></div>
+
+<p>See? That’s much easier than writing a <a href="https://www.djangoproject.com/">Django</a> app.</p>
+
+<p>However, since Flask is really simple, the codes can easily be spaghetti. Furthermore, Flask does not come with Cross-Site Request Forgery (CSRF) protection. It is stated clearly on their page:</p>
+
+<blockquote>
+  <p>Why does Flask not do that for you? The ideal place for this to happen is the form validation framework, which does not exist in Flask.</p>
+</blockquote>
+
+<p>So, I guess it is better to use Flask just as it is intended to in the very first place: simple web app. Nevertheless, when you have to deal with forms or complex algorithm, then Django will come in handy.</p>
 
 
   </article>

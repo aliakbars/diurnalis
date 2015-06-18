@@ -5,9 +5,64 @@
     <description>Private site of aliakbars</description>
     <link>http://aliakbars.github.io/</link>
     <atom:link href="http://aliakbars.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 03 Dec 2014 19:12:00 +0700</pubDate>
-    <lastBuildDate>Wed, 03 Dec 2014 19:12:00 +0700</lastBuildDate>
+    <pubDate>Thu, 18 Jun 2015 20:06:25 +0700</pubDate>
+    <lastBuildDate>Thu, 18 Jun 2015 20:06:25 +0700</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Python Unit Test</title>
+        <description>&lt;p&gt;Test-driven development has become more prevalent these days. People started to realize that maintainable working code is more important than writing the documentation of the code. As for me, I started to write test cases for my codes after enrolling the &lt;a href=&quot;https://www.udacity.com/course/viewer#!/c-cs212/l-48532737/e-48737202/m-48692640&quot;&gt;Design of Computer Program class&lt;/a&gt; on Udacity. On the course, you can see that writing unit test can really help you to breakdown the problem you are facing and how to think modularly.&lt;/p&gt;
+
+&lt;p&gt;The easiest way to write a unit test in Python is by using &lt;code&gt;assert&lt;/code&gt;. You just need to declare the function with its parameters and then compare it with the predicted output. You can see the example below.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;It might look so simple, but believe me, it will help you that much in terms of solving the problems meticulously step by step.&lt;/p&gt;
+
+&lt;p&gt;Aside from &lt;code&gt;assert&lt;/code&gt;, Python has a package module specifically designed for unit testing called &lt;a href=&quot;https://docs.python.org/2/library/unittest.html&quot;&gt;&lt;code&gt;unittest&lt;/code&gt;&lt;/a&gt;. The module is a actually a framework that can handle several things in terms of unit testing – based on the site:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;test fixture: the preparation needed for testing, such as proxy database&lt;/li&gt;
+  &lt;li&gt;test case: the smallest unit of testing&lt;/li&gt;
+  &lt;li&gt;test suite: set of test cases used for integration testing, and&lt;/li&gt;
+  &lt;li&gt;test runner: a component which orchestrates the execution of the tests and provides the outcome to the user&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The script for unit testing using the &lt;code&gt;unittest&lt;/code&gt; module is basically consists of things like these:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;unittest&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MyTest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;unittest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TestCase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setUp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+		&lt;span class=&quot;c&quot;&gt;# Where you define the preparation needed for testing, e.g. database&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;tearDown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+		&lt;span class=&quot;c&quot;&gt;# What to do after the test is completed&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;testCase1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+		&lt;span class=&quot;c&quot;&gt;# Test case #1&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;testCase2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+		&lt;span class=&quot;c&quot;&gt;# Test case #2&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The interesting point of using the &lt;code&gt;unittest&lt;/code&gt; module is that you can run the test cases arbitrarily. You can write it in a separate file, or just include it on the same file. Then, when you want to run the test, you just have to run this command from shell:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;python -m unittest &amp;lt;your_test_file_name.py&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Believe me, it is a very good thing to write your own test cases beforehand, so that when you have to change the code, you can always check it easily whether it will work the same way or not. As I’ve been taught, this is the way of designing a computer program. The more test case you write, the more robust your code should be!&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 15 Jun 2015 05:24:23 +0700</pubDate>
+        <link>http://aliakbars.github.io/python/2015/06/15/python-unit-test/</link>
+        <guid isPermaLink="true">http://aliakbars.github.io/python/2015/06/15/python-unit-test/</guid>
+        
+        
+        <category>python</category>
+        
+      </item>
     
       <item>
         <title>I Just Can't Stop Learning - Flask</title>
@@ -37,15 +92,13 @@
 
 </description>
         <pubDate>Thu, 04 Dec 2014 01:50:21 +0700</pubDate>
-        <link>http://aliakbars.github.io/python,/flask,/microframework/2014/12/04/i-just-cant-stop-learning/</link>
-        <guid isPermaLink="true">http://aliakbars.github.io/python,/flask,/microframework/2014/12/04/i-just-cant-stop-learning/</guid>
+        <link>http://aliakbars.github.io/python/flask/2014/12/04/i-just-cant-stop-learning/</link>
+        <guid isPermaLink="true">http://aliakbars.github.io/python/flask/2014/12/04/i-just-cant-stop-learning/</guid>
         
         
-        <category>python,</category>
+        <category>python</category>
         
-        <category>flask,</category>
-        
-        <category>microframework</category>
+        <category>flask</category>
         
       </item>
     
@@ -61,15 +114,11 @@
 
 </description>
         <pubDate>Wed, 05 Nov 2014 03:38:32 +0700</pubDate>
-        <link>http://aliakbars.github.io/ruby/on/rails/2014/11/05/ruby-on-rails/</link>
-        <guid isPermaLink="true">http://aliakbars.github.io/ruby/on/rails/2014/11/05/ruby-on-rails/</guid>
+        <link>http://aliakbars.github.io/ruby-on-rails/2014/11/05/ruby-on-rails/</link>
+        <guid isPermaLink="true">http://aliakbars.github.io/ruby-on-rails/2014/11/05/ruby-on-rails/</guid>
         
         
-        <category>ruby</category>
-        
-        <category>on</category>
-        
-        <category>rails</category>
+        <category>ruby-on-rails</category>
         
       </item>
     

@@ -2,7 +2,7 @@
 layout: post
 title:  "I Just Can't Stop Learning - Flask"
 date:   2014-12-03 18:50:21
-categories: python, flask, microframework
+categories: python flask
 ---
 
 It seems like my mind keeps pushing me to learn something new. I haven't even done learning Ruby on Rails yet, but I've been attracted to learn Python Flask now. Since I now Python better than Ruby, I just can't resist to at least deploy a "Hello, World!" project to Heroku. You can find it [here][flask.ali].
