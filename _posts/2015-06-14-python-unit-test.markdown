@@ -50,7 +50,7 @@ The interesting point of using the `unittest` module is that you can run the tes
 python -m unittest <your_test_file_name.py>
 {% endhighlight %}
 
-Believe me, it is a very good thing to write your own test cases beforehand, so that when you have to change the code, you can always check it easily whether it will work the same way or not. As I've been taught, this is the way of designing a computer program. The more test case you write, the more robust your code should be!
+Believe me, it is a very good thing to write your own test cases beforehand, so that when you have to change the code, you can always check it easily whether it will work the same way or not. As I've been taught, this is the way of designing a computer program. The more test case you write, the robuster your code should be!
 
 [docp]: https://www.udacity.com/course/viewer#!/c-cs212/l-48532737/e-48737202/m-48692640
 [unittest]: https://docs.python.org/2/library/unittest.html
