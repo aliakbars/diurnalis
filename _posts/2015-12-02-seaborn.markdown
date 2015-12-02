@@ -5,9 +5,9 @@ date:   2015-12-02 22:04:23
 categories: python
 ---
 
-Have you ever dealt with [`matplotlib`](http://matplotlib.org/) and got frustrated with it? If you have done plotting in Matlab or R, I am very certain that you loathe `matplotlib`, just as I do. Although it has a vast amount of features, it is just quite troublesome to get used to it. The drawing itself is not the eye-catching one. However, that was the past.
+Have you ever dealt with [matplotlib](http://matplotlib.org/) and got frustrated with it? If you have done plotting in Matlab or R, I am very certain that you loathe matplotlib, just as I do. Although it has a vast amount of features, it is just quite troublesome to get used to it. The drawing itself is not the eye-catching one. However, that was the past.
 
-Meet [`seaborn`](http://stanford.edu/~mwaskom/software/seaborn/). This Stanford-made library is an exquisite way to visualize statistical data. It *is* based on `matplotlib`, but in combination with [`pandas`](http://pandas.pydata.org/), the well-known data analysis library, they have put smiles on Python-lovers' faces again.
+Meet [**seaborn**](http://stanford.edu/~mwaskom/software/seaborn/). This Stanford-made library is an exquisite way to visualize statistical data. It *is* based on matplotlib, but in combination with [pandas](http://pandas.pydata.org/), the well-known data analysis library. They have clearly put smiles on Python-lovers/data-scientist faces again.
 
 Here is a snippet for simple point plot
 
@@ -26,11 +26,11 @@ which will result in something like this
 
 ![Point Plot](/assets/pointplot.png)
 
-Pretty neat, isn't it? And, oh, *yes*, you definitely need `numpy` to use seaborn.
+Pretty neat, isn't it? And, oh, *yes*, you need numpy to use seaborn.
 
-The developers even included some sample dataset, e.g. Anscombe's quartet, cortial brain networks, and car crashes. Of course you can use your own dataset. The library is very csv-friendly, though this is because of `pandas`.
+The developers even included some sample dataset, e.g. Anscombe's quartet, cortial brain networks, and car crashes. Of course you can use your own dataset. The library is very csv-friendly, though this is because of pandas.
 
-One other nice feature you can get from `seaborn` is that you can draw marginal distributions from the dataset with just a single line of code! The snippet below will show you how it is done.
+Another nice feature you can get from seaborn is that you can draw marginal distributions from the dataset with just a single line of code! The snippet below will show you how it is done.
 
 {% highlight python %}
 import seaborn as sns
@@ -41,6 +41,8 @@ g = sns.jointplot("total_bill", "tip", data=tips, kind="reg",
                   xlim=(0, 60), ylim=(0, 12), color="r", size=7)
 {% endhighlight %}
 
-Once again, touché.
+The code will result in something like the figure below.
 
 ![Linear regression with marginal distributions](http://stanford.edu/~mwaskom/software/seaborn/_images/regression_marginals.png)
+
+*Go ahead and try it yourself!*
