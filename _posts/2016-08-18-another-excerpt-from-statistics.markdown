@@ -15,7 +15,7 @@ Important things to note:
 4. \\(\bar{x} = 2006\\)
 5. \\(SE = \sqrt{N} \times \sqrt{p \times (1-p)} = \sqrt{7500} \times \sqrt{1/4 \times 3/4} = 37.5\\)
 
-Therefore, we can calculate the standard error as follows:
+Therefore, we can calculate the \\(z\\)-statistics as follows:
 
 $$
 z = \frac{\bar{x}-\mathbb{E}[x]}{SE}
