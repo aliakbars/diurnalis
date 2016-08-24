@@ -1,0 +1,37 @@
+---
+layout: post
+title:  "The t-Test"
+date:   2016-08-24 15:14:11
+categories: statistics
+---
+
+> On another day, 6 readings on span gas turn out to be 72, 79, 65, 84, 67, 77. Is the machine properly calibrated? Or do the measurements show bias?
+
+*This problem and its solution are taken from Statistics by Freedman, et al. (1998).*
+
+Important things to note:
+
+1. \\(N = 6 \rightarrow df = 5\\),
+2. \\(\mathbb{E}[x] = 70\\) (given in the previous problem)
+3. \\(\bar{x} = 74\\)
+4. \\(SD_{\bar{x}} = 6.68\\)
+5. \\(SD^{+} = \sqrt{\frac{N}{N-1}} \times SD_{\bar{x}} = \sqrt{\frac{6}{5}} \times 6.68 \approx 7.32\\)
+5. \\(SE = \frac{SD^{+}}{\sqrt{N}} = \frac{7.32}{6} \approx 2.99\\)
+
+Therefore, we can calculate the \\(t\\)-statistics as follows:
+
+$$
+t = \frac{\bar{x}-\mathbb{E}[x]}{SE}
+= \frac{74 - 70}{2.99}
+\approx 1.34 
+$$
+
+Using the routine from `scipy`, we got
+
+{% highlight python %}
+>>> from scipy.stats import t
+>>> 1 - t.cdf(1.34, df=5)
+0.11895750620122192
+{% endhighlight %}
+
+> There does not seem to be much evidence of bias. The machine is ready to use.
