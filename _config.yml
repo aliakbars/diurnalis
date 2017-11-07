@@ -10,3 +10,5 @@ github_username:  aliakbars
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+theme: jekyll-theme-merlot
