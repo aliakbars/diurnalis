@@ -1,0 +1,54 @@
+---
+layout: post
+title:  "Altair"
+date:   2018-06-14 10:58:11
+categories: visualisation
+---
+
+One of the things that I usually deal with at work is data visualisation. Since my main choice of language is Python, I am really looking forward to beautiful expressive easy-to-use visualisation libraries. However, the most common one is matplotlib, which is imperative. Some say that it is far worse than R's ggplot in terms of ease of use. I cannot disagree with that.
+
+Yes, there's some alternative, such as [seaborn](https://seaborn.pydata.org/) and built-in [pandas](https://pandas.pydata.org/pandas-docs/stable/visualization.html) plotting. Nevertheless, one thing is missing, *interactivity*. Sometimes, you just need to look at some data points closely to get a better insight of your data. Writing captions in the figure will certainly clutter the visualisation.
+
+Enter: [Altair](https://altair-viz.github.io/).
+
+> Altair is a declarative statistical visualization library for Python, based on Vega and Vega-Lite, and the source is available on GitHub.
+
+Built by Jake VanderPlas and some of his colleagues, this visualisation library answers most of my problems. It's interactive, easy to use, and beautiful. You can add tooltips to your data points when you hover them -- with only adding a method! Let me show you an example.
+
+```python
+import altair as alt
+import seaborn as sns
+
+df = sns.load_dataset('iris')
+
+alt.Chart(df).mark_point().encode(
+    x='petal_length',
+    y='petal_width',
+    color='species'
+)
+```
+
+That's all you need to create a scatter plot. How to make it interactive, you ask?
+
+```python
+alt.Chart(df).mark_point().encode(
+    x='petal_length',
+    y='petal_width',
+    color='species'
+).interactive()
+```
+
+Yep. *That's it.*
+
+By adding `.interactive()`, you can easily move around the plot, plus zooming in and out. Adding a tooltip is also a one parameter away.
+
+```python
+alt.Chart(df).mark_point().encode(
+    x='petal_length',
+    y='petal_width',
+    color='species',
+    tooltip='species'
+).interactive()
+```
+
+> Pretty cool, isn't it?
